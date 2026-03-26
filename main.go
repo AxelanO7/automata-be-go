@@ -15,7 +15,7 @@ func main() {
 	flag.Parse()
 
 	// Load file .env dari level root/parent apabila dijalankan di nested directory
-	_ = godotenv.Load("../.env")
+	_ = godotenv.Load(".env")
 
 	if err := db.InitSupabase(); err != nil {
 		log.Fatalf("Kesalahan Fatal: Gagal inisialisasi Supabase - %v\n", err)
